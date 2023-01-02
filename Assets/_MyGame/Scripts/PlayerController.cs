@@ -5,8 +5,6 @@ using UnityEngine.Sprites;
 
 public class PlayerController : MonoBehaviour
 {
-    Rigidbody2D rb;
-
     [SerializeField]
     private float rotationAgility;
     [SerializeField]
@@ -20,6 +18,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private SpriteRenderer presentRenderer;
 
+    private Rigidbody2D rb;
     private float currentForwardSpeed;
     private float currentBackwardSpeed;
     private bool carryingPresent = false;
@@ -86,6 +85,28 @@ public class PlayerController : MonoBehaviour
             }
 
             yield return instruction;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Present")
+        {
+            Sprite sprite = collision.gameObject.GetComponent<Sprite>();
+            CollectPresent(sprite);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        switch(collision.gameObject.tag)
+        {
+            case "Booster":
+                StartCoroutine(SpeedBoost());
+                break;
+            case "PresentStore":
+                PlacePresent();
+                break;
         }
     }
 }
