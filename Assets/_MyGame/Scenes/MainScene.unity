@@ -236,6 +236,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   presents:
   - {fileID: 7672250360642615922, guid: 28c22215db5414a4b8d36ef2183701b3, type: 3}
+  - {fileID: 6993427406804000729, guid: bd9673d3627d6451dac54416d3bf6de0, type: 3}
   spawnFrequency: 2
   spawnRangeX: 16.37
   spawnRangeY: 15.88
@@ -497,6 +498,7 @@ GameObject:
   - component: {fileID: 837462656329898997}
   - component: {fileID: 837462656317344768}
   - component: {fileID: 837462656317344769}
+  - component: {fileID: 837462656317344770}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -543,6 +545,32 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!61 &837462656317344770
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 837462656317344767}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5, y: 2}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5, y: 2}
+  m_EdgeRadius: 0
 --- !u!1 &837462656317364363
 GameObject:
   m_ObjectHideFlags: 0

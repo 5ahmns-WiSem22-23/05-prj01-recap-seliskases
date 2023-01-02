@@ -45,6 +45,8 @@ public class PlayerController : MonoBehaviour
 
     private void CollectPresent(Sprite present)
     {
+        Debug.Log(present);
+
         if (carryingPresent) return;
         presentRenderer.sprite = present;
         
@@ -92,8 +94,11 @@ public class PlayerController : MonoBehaviour
     {
         if(collision.gameObject.tag == "Present")
         {
-            Sprite sprite = collision.gameObject.GetComponent<Sprite>();
+            if (carryingPresent) return;
+
+            Sprite sprite = collision.gameObject.GetComponent<SpriteRenderer>().sprite;
             CollectPresent(sprite);
+            Destroy(collision.gameObject);
         }
     }
 
