@@ -6,6 +6,8 @@ using UnityEngine.Sprites;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField]
+    private int maxHealth;
+    [SerializeField]
     private float rotationAgility;
     [SerializeField]
     private float standardForwardSpeed;
@@ -24,6 +26,7 @@ public class PlayerController : MonoBehaviour
     private bool carryingPresent = false;
     private bool isBoosted = false;
 
+    private int currentHealth;
     private int presentCount = 0;
 
     private void Start()
@@ -31,6 +34,7 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         currentForwardSpeed = standardForwardSpeed;
         currentBackwardSpeed = standardBackwardSpeed;
+        currentHealth = maxHealth;
     }
 
     private void FixedUpdate()
@@ -102,6 +106,10 @@ public class PlayerController : MonoBehaviour
             Sprite sprite = collision.gameObject.GetComponent<SpriteRenderer>().sprite;
             CollectPresent(sprite);
             Destroy(collision.gameObject);
+        } else if(collision.gameObject.tag == "Spike")
+        {
+            currentHealth--;
+            Destroy(gameObject);
         }
     }
 
