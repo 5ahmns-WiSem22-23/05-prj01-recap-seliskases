@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Present
+  - Booster
+  - PresentStore
   layers:
   - Default
   - TransparentFX

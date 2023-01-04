@@ -24,6 +24,8 @@ public class PlayerController : MonoBehaviour
     private bool carryingPresent = false;
     private bool isBoosted = false;
 
+    private int presentCount = 0;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -60,6 +62,7 @@ public class PlayerController : MonoBehaviour
         presentRenderer.sprite = null;
 
         carryingPresent = false;
+        presentCount++;
     }
 
     private IEnumerator SpeedBoost()
