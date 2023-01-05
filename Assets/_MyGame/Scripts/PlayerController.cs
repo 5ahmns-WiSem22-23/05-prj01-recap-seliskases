@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Sprites;
 
 public class PlayerController : MonoBehaviour
@@ -109,7 +110,7 @@ public class PlayerController : MonoBehaviour
         } else if(collision.gameObject.tag == "Spike")
         {
             currentHealth--;
-            Destroy(gameObject);
+            SceneManager.LoadScene("LostScene");
         }
     }
 
