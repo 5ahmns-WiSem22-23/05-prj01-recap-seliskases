@@ -1,7 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
@@ -15,7 +14,7 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI countTextField;
 
-    public float currentTime { get; private set; }
+    private float currentTime;
 
     private void Start()
     {
@@ -33,5 +32,15 @@ public class UIManager : MonoBehaviour
 
         string countString = PlayerController.presentCount + "/" + requiredCount + " presents collected";
         countTextField.text = countString;
+
+        if(PlayerController.presentCount == requiredCount)
+        {
+            SceneManager.LoadScene(2);
+        }
+
+        if(currentTime < 0)
+        {
+            SceneManager.LoadScene(3);
+        }
     }
 }
