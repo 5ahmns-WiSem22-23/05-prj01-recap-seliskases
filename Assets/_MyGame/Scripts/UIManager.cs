@@ -3,12 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class Timer : MonoBehaviour
+public class UIManager : MonoBehaviour
 {
     [SerializeField]
     private float startTime;
     [SerializeField]
-    private TextMeshProUGUI textField;
+    private int requiredCount;
+
+    [SerializeField]
+    private TextMeshProUGUI timeTextField;
+    [SerializeField]
+    private TextMeshProUGUI countTextField;
 
     public float currentTime { get; private set; }
 
@@ -24,6 +29,9 @@ public class Timer : MonoBehaviour
         float minutes = Mathf.FloorToInt(currentTime / 60f);
         float seconds = Mathf.FloorToInt(currentTime - minutes * 60);
         string timeString = string.Format("{0:0}:{1:00}", minutes, seconds);
-        textField.text = timeString;
+        timeTextField.text = timeString;
+
+        string countString = PlayerController.presentCount + "/" + requiredCount + " presents collected";
+        countTextField.text = countString;
     }
 }
