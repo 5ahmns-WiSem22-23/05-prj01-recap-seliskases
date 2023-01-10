@@ -735,6 +735,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   presents:
   - {fileID: 1514710000384285144, guid: 80d7c5dd729ce404196b097e5ff6a925, type: 3}
+  - {fileID: 4802089787266684797, guid: d04c15e68aab74837b7d86488ceb4be8, type: 3}
+  - {fileID: 460691597127519381, guid: 497256f833d194f2ab629bbf545a4d0d, type: 3}
+  - {fileID: 9136681443945188681, guid: 6d39724b4da834a00a667600a2decb40, type: 3}
   spawnFrequency: 4
   spawnRangeX: 35
   spawnRangeY: 35
