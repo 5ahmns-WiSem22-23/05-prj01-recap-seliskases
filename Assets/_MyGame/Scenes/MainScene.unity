@@ -1292,7 +1292,6 @@ GameObject:
   - component: {fileID: 540813299}
   - component: {fileID: 540813298}
   - component: {fileID: 540813297}
-  - component: {fileID: 540813301}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1384,22 +1383,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &540813301
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 540813296}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b2ad35127e894939bccda3c99299662, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startTime: 90
-  requiredCount: 10
-  timeTextField: {fileID: 657256946}
-  countTextField: {fileID: 1843817139}
 --- !u!1 &557014015
 GameObject:
   m_ObjectHideFlags: 0
@@ -3186,7 +3169,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1431250953}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.06, y: 0, z: -4.75}
+  m_LocalPosition: {x: -0.06, y: 0, z: -7.86}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 109026627}
@@ -4750,6 +4733,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2133763205}
   - component: {fileID: 2133763204}
+  - component: {fileID: 2133763206}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -4785,6 +4769,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2133763206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2133763203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b2ad35127e894939bccda3c99299662, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startTime: 120
+  requiredCount: 10
+  timeTextField: {fileID: 657256946}
+  countTextField: {fileID: 1843817139}
 --- !u!1 &837462656317174105
 GameObject:
   m_ObjectHideFlags: 0

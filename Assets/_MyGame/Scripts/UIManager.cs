@@ -19,6 +19,12 @@ public class UIManager : MonoBehaviour
     private void Start()
     {
         currentTime = startTime;
+
+        float highscore = PlayerPrefs.GetFloat("highscore");
+        if(highscore == 0)
+        {
+            PlayerPrefs.SetFloat("highscore", startTime);
+        }
     }
 
     private void Update()
@@ -35,6 +41,11 @@ public class UIManager : MonoBehaviour
 
         if(PlayerController.presentCount == requiredCount)
         {
+            float highscore = PlayerPrefs.GetFloat("highscore");
+            if(currentTime < highscore)
+            {
+                PlayerPrefs.SetFloat("highscore", currentTime);
+            }
             SceneManager.LoadScene(2);
         }
 
