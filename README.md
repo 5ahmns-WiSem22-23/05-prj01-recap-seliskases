@@ -6,6 +6,18 @@ Zu Weihnachten gibt es immer viel zu viel Unordnung. Und - oh nein - der Weihnac
 
 In diesem "Recap" Projekt sollen bereits gelernte Unity Konzepte wieder aufgefrischt wrden.
 
+## Steuerung
+
+Das Spiel wird mit den WASD Tasten gesteuert. Wobei man mit W vorwärts und mit S rückwärts fahren kannm sowie mit A und D die Rotation gesteuert werden kann.
+
+## Optional Features
+
+- Surface Shader für Booster Areas
+- Minimap
+- Gewinn Logic mit Timer, Highscore, Win & Lost
+- Booster Areas
+- Smooth Camera Movement
+
 ## Assets
 
 - Winter Wonderland from Gamertose: https://assetstore.unity.com/packages/2d/textures-materials/nature/winter-wonderland-by-gamertose-49835
